@@ -46,38 +46,6 @@ export default function GamesSection() {
       glowColor: 'shadow-green-500/60',
     },
     {
-      id: 5,
-      name: 'BLACKJACK',
-      icon: '🂡',
-      image: '/games/blackjack.jpg',
-      color: 'from-purple-600 to-purple-700',
-      glowColor: 'shadow-purple-500/60',
-    },
-    {
-      id: 6,
-      name: 'BACCARAT',
-      icon: '🎴',
-      image: '/games/baccarat.jpg',
-      color: 'from-pink-600 to-pink-700',
-      glowColor: 'shadow-pink-500/60',
-    },
-    {
-      id: 7,
-      name: 'DICE',
-      icon: '🎲',
-      image: '/games/dice.jpg',
-      color: 'from-blue-600 to-blue-700',
-      glowColor: 'shadow-blue-500/60',
-    },
-    {
-      id: 8,
-      name: 'CRASH',
-      icon: '🚀',
-      image: '/games/crash.jpg',
-      color: 'from-lime-600 to-lime-700',
-      glowColor: 'shadow-lime-500/60',
-    },
-    {
       id: 9,
       name: 'ROULETTE',
       icon: '🎯',
@@ -112,15 +80,12 @@ export default function GamesSection() {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 bg-gradient-to-b from-[#050810] via-[#0f1820] to-[#050810] overflow-hidden">
-
-      {/* Background glow */}
-      <div className="absolute inset-0">
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-full h-96 bg-green-500/20 blur-3xl" />
-        <div className="absolute top-1/3 -left-48 w-96 h-96 bg-green-500/20 blur-3xl" />
-        <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-green-500/20 blur-3xl" />
-      </div>
-
+      <section
+      className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat font-poppins "
+      style={{
+        backgroundImage: "url('/twobanner.jpeg')", 
+      }}
+    >
       <div className="relative z-10 max-w-7xl mx-auto px-6">
 
         {/* Title */}
