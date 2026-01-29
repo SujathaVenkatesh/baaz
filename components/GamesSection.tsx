@@ -16,10 +16,10 @@ export default function GamesSection() {
     {
       id: 1,
       name: 'MINES',
-      icon: '⚱️',
+      icon: '💣',
       image: '/games/mines.jpg',
       color: 'from-orange-600 to-red-700',
-      glowColor: 'shadow-orange-500/50',
+      glowColor: 'shadow-orange-500/60',
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ export default function GamesSection() {
       icon: '♠️',
       image: '/games/poker.jpg',
       color: 'from-amber-600 to-amber-700',
-      glowColor: 'shadow-amber-500/50',
+      glowColor: 'shadow-amber-500/60',
     },
     {
       id: 3,
@@ -35,7 +35,7 @@ export default function GamesSection() {
       icon: '🪙',
       image: '/games/coinflip.jpg',
       color: 'from-teal-600 to-teal-700',
-      glowColor: 'shadow-teal-500/50',
+      glowColor: 'shadow-teal-500/60',
     },
     {
       id: 4,
@@ -43,78 +43,148 @@ export default function GamesSection() {
       icon: '🎡',
       image: '/games/luckywheel.jpg',
       color: 'from-green-600 to-green-700',
-      glowColor: 'shadow-green-500/50',
+      glowColor: 'shadow-green-500/60',
+    },
+    {
+      id: 5,
+      name: 'BLACKJACK',
+      icon: '🂡',
+      image: '/games/blackjack.jpg',
+      color: 'from-purple-600 to-purple-700',
+      glowColor: 'shadow-purple-500/60',
+    },
+    {
+      id: 6,
+      name: 'BACCARAT',
+      icon: '🎴',
+      image: '/games/baccarat.jpg',
+      color: 'from-pink-600 to-pink-700',
+      glowColor: 'shadow-pink-500/60',
+    },
+    {
+      id: 7,
+      name: 'DICE',
+      icon: '🎲',
+      image: '/games/dice.jpg',
+      color: 'from-blue-600 to-blue-700',
+      glowColor: 'shadow-blue-500/60',
+    },
+    {
+      id: 8,
+      name: 'CRASH',
+      icon: '🚀',
+      image: '/games/crash.jpg',
+      color: 'from-lime-600 to-lime-700',
+      glowColor: 'shadow-lime-500/60',
+    },
+    {
+      id: 9,
+      name: 'ROULETTE',
+      icon: '🎯',
+      image: '/games/roulette.jpg',
+      color: 'from-red-600 to-red-700',
+      glowColor: 'shadow-red-500/60',
+    },
+    {
+      id: 10,
+      name: 'SLOTS',
+      icon: '🎰',
+      image: '/games/slots.jpg',
+      color: 'from-yellow-600 to-yellow-700',
+      glowColor: 'shadow-yellow-500/60',
+    },
+    {
+      id: 11,
+      name: 'KENO',
+      icon: '🎲',
+      image: '/games/keno.jpg',
+      color: 'from-indigo-600 to-indigo-700',
+      glowColor: 'shadow-indigo-500/60',
+    },
+    {
+      id: 12,
+      name: 'PLINKO',
+      icon: '⭕',
+      image: '/games/plinko.jpg',
+      color: 'from-cyan-600 to-cyan-700',
+      glowColor: 'shadow-cyan-500/60',
     },
   ];
 
   return (
     <section className="relative py-20 md:py-32 bg-gradient-to-b from-[#050810] via-[#0f1820] to-[#050810] overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Top center green glow */}
-        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-full h-96 bg-gradient-to-b from-green-500/25 via-green-500/10 to-transparent blur-3xl pointer-events-none" />
-        
-        {/* Left side glow */}
-        <div className="absolute top-1/4 -left-48 w-96 h-96 bg-green-500 rounded-full opacity-20 blur-3xl" />
-        
-        {/* Right side glow */}
-        <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-green-500 rounded-full opacity-20 blur-3xl" />
-        
-        {/* Bottom glow wave */}
-        <div className="absolute -bottom-32 left-0 right-0 h-96 bg-gradient-to-t from-green-500/20 via-green-500/5 to-transparent blur-3xl" />
+
+      {/* Background glow */}
+      <div className="absolute inset-0">
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-full h-96 bg-green-500/20 blur-3xl" />
+        <div className="absolute top-1/3 -left-48 w-96 h-96 bg-green-500/20 blur-3xl" />
+        <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-green-500/20 blur-3xl" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
+
         {/* Title */}
-        <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            <span className="text-primary">◆◆</span> Top Casino Games <span className="text-primary">◆◆</span>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white">
+            ◆◆ <span className="text-green-400">Top Casino Games</span> ◆◆
           </h2>
+          <p className="mt-4 text-green-200/70 max-w-xl mx-auto">
+            Play the most popular casino games with high rewards and real-time excitement.
+          </p>
         </div>
 
         {/* Games Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12">
-          {games.map((game) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          {games.map((game, index) => (
             <div
               key={game.id}
-              className="group cursor-pointer"
+              className="group"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
-              {/* Card outer border */}
-              <div className={`bg-gradient-to-br ${game.color} p-1 rounded-3xl shadow-2xl ${game.glowColor} transition-all duration-300 group-hover:shadow-2xl group-hover:scale-110 group-hover:shadow-yellow-400/60 overflow-hidden`}>
-                {/* Card inner */}
-                <div className="bg-gradient-to-br from-gray-950 via-gray-900 to-black rounded-3xl h-full flex flex-col overflow-hidden">
-                  {/* Game Image */}
-                  <div className="relative h-48 w-full overflow-hidden">
-                    <img 
-                      src={game.image || "/placeholder.svg"} 
+              <div
+                className={`p-1 rounded-3xl bg-gradient-to-br ${game.color}
+                ${game.glowColor}
+                transition-all duration-500
+                group-hover:scale-105`}
+              >
+                <div className="bg-black rounded-3xl overflow-hidden">
+
+                  {/* Image */}
+                  <div className="relative h-44 md:h-48 overflow-hidden">
+                    <img
+                      src={game.image || "/placeholder.svg"}
                       alt={game.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-125"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/90" />
                   </div>
 
-                  {/* Content area */}
-                  <div className="flex-1 p-6 flex flex-col items-center justify-center space-y-3">
-                    {/* Icon */}
-                    <div className="text-5xl md:text-6xl filter drop-shadow-xl">
-                      {game.icon}
-                    </div>
-
-                    {/* Game name */}
-                    <h3 className="text-lg font-bold text-primary text-center tracking-widest">{game.name}</h3>
+                  {/* Content */}
+                  <div className="p-6 flex flex-col items-center gap-3">
+                    <div className="text-5xl">{game.icon}</div>
+                    <h3 className="text-lg font-bold tracking-widest text-green-400">
+                      {game.name}
+                    </h3>
                   </div>
+
                 </div>
               </div>
             </div>
           ))}
+
         </div>
 
-        {/* View All Games Button */}
-        <div className="flex justify-center">
-          <button className="px-8 py-4 bg-gradient-to-r from-green-600 to-green-700 text-white font-bold rounded-lg border-2 border-green-400 hover:from-green-700 hover:to-green-800 transition-all shadow-lg shadow-green-500/50">
+        {/* CTA */}
+        <div className="flex justify-center mt-20">
+          <button className="px-12 py-4 rounded-xl font-bold text-black
+            bg-gradient-to-r from-green-500 to-green-600
+            hover:from-green-600 hover:to-green-700
+            shadow-[0_0_35px_rgba(34,197,94,0.8)]">
             View All Games
           </button>
         </div>
+
       </div>
     </section>
   );
