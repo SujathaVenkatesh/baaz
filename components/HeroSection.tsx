@@ -24,34 +24,13 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#05070f] pt-28">
+    <section
+  className="relative min-h-screen overflow-hidden pt-28 bg-cover bg-center"
+  style={{ backgroundImage: "url('/hero-bg.png')" }}
+>
 
-      {/* ================= BACKGROUND ENERGY ================= */}
-      <div className="absolute inset-0">
 
-        {/* Green energy swirl */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(34,197,94,0.35),transparent_60%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(250,204,21,0.15),transparent_55%)]" />
 
-        {/* Neon rings */}
-        <div className="absolute left-1/2 top-1/2 w-[900px] h-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-green-400/30 blur-sm" />
-        <div className="absolute left-1/2 top-1/2 w-[650px] h-[650px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-green-400/20 blur-sm" />
-
-        {/* Floating coins */}
-        {coins.map((coin) => (
-          <div
-            key={coin.id}
-            className="absolute w-12 h-12 md:w-20 md:h-20 animate-float"
-            style={{
-              left: coin.left,
-              top: coin.top,
-              animationDelay: coin.delay,
-            }}
-          >
-            <div className="w-full h-full rounded-full bg-gradient-to-br from-yellow-300 via-yellow-400 to-yellow-600 shadow-[0_0_25px_rgba(250,204,21,0.9)]" />
-          </div>
-        ))}
-      </div>
 
       {/* ================= CONTENT ================= */}
       <div className="relative z-10 max-w-7xl mx-auto px-6">
