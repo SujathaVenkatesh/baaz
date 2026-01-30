@@ -82,12 +82,13 @@ export default function HeroSection() {
           <div className="relative flex justify-center md:justify-end">
             <div
               className="
-                relative
-                w-[95%]
-                md:w-[520px]
-                lg:w-[600px]
-                xl:w-[650px]
-                md:translate-x-6
+ relative
+      w-full
+      md:w-[950px]
+      lg:w-[980px]
+      xl:w-[900px]
+      2xl:w-[1000px]
+      md:translate-x-12
               "
             >
               <img
