@@ -8,8 +8,9 @@ export default function HeroSection() {
       id="games"
       className="
         relative overflow-hidden font-poppins
-        pt-24 sm:pt-28 md:pt-32
-        min-h-[90vh] md:min-h-[100vh]
+        pt-20 sm:pt-24 md:pt-32
+        pb-16 sm:pb-20
+        md:min-h-screen
         bg-cover bg-center
       "
       style={{ backgroundImage: "url('/hero-bg.png')" }}
@@ -22,11 +23,11 @@ export default function HeroSection() {
           className="
             grid grid-cols-1 md:grid-cols-2
             items-center
-            gap-10 md:gap-6
+            gap-8 md:gap-6
           "
         >
           {/* LEFT CONTENT */}
-          <div className="space-y-6 text-left">
+          <div className="space-y-5 sm:space-y-6 text-left">
             <h1
               className="
                 text-3xl sm:text-4xl md:text-5xl lg:text-6xl
@@ -47,7 +48,7 @@ export default function HeroSection() {
 
             <button
               className="
-                inline-flex items-center gap-3
+                inline-flex items-center
                 px-7 sm:px-9 py-3 sm:py-3.5
                 rounded-xl font-bold text-black
                 bg-gradient-to-r from-green-500 to-green-600
@@ -66,7 +67,7 @@ export default function HeroSection() {
             <div
               className="
                 relative
-                w-[85%] sm:w-[70%]
+                w-[80%] sm:w-[65%]
                 md:w-[520px] lg:w-[650px] xl:w-[750px]
                 mt-6 md:mt-0
               "
@@ -78,7 +79,6 @@ export default function HeroSection() {
                   w-full h-auto object-contain
                   drop-shadow-[0_30px_80px_rgba(0,0,0,0.6)]
                   drop-shadow-[0_0_90px_rgba(34,197,94,0.85)]
-                  animate-float
                 "
               />
 
@@ -86,19 +86,9 @@ export default function HeroSection() {
               <div
                 className="
                   absolute inset-0 -z-10
-                  blur-[100px]
+                  blur-[90px]
                   bg-green-500/30
                   rounded-full
-                "
-              />
-
-              {/* DEPTH SHADOW */}
-              <div
-                className="
-                  absolute bottom-[-20px] left-1/2 -translate-x-1/2
-                  w-[65%] h-[25px]
-                  bg-black/60 blur-[25px]
-                  rounded-full -z-20
                 "
               />
             </div>
