@@ -2,7 +2,27 @@
 
 import React, { useEffect, useState } from "react";
 
+interface Coin {
+  id: number;
+  left: string;
+  top: string;
+  delay: string;
+}
+
 export default function HeroSection() {
+  const [coins, setCoins] = useState<Coin[]>([]);
+
+  useEffect(() => {
+    setCoins(
+      Array.from({ length: 18 }).map((_, i) => ({
+        id: i,
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        delay: `${i * 0.25}s`,
+      }))
+    );
+  }, []);
+
   return (
     <section
       id="games"
@@ -13,9 +33,6 @@ export default function HeroSection() {
       "
       style={{ backgroundImage: "url('/hero-bg.png')" }}
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60" />
-
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div
           className="
@@ -31,10 +48,11 @@ export default function HeroSection() {
               className="
                 text-4xl md:text-5xl lg:text-6xl
                 font-extrabold leading-tight text-white
+                drop-shadow-[0_0_18px_rgba(255,255,255,0.35)]
               "
             >
               The Ultimate <br />
-              <span className="text-green-400">
+              <span className="drop-shadow-[0_0_22px_rgba(255,255,255,0.6)]">
                 Casino Platform
               </span>
             </h1>
@@ -60,7 +78,7 @@ export default function HeroSection() {
             </button>
           </div>
 
-          {/* RIGHT VIDEO */}
+          {/* RIGHT IMAGE (BIGGER) */}
           <div className="relative flex justify-center md:justify-end">
             <div
               className="
@@ -70,27 +88,22 @@ export default function HeroSection() {
                 lg:w-[600px]
                 xl:w-[650px]
                 md:translate-x-6
-                rounded-3xl
-                overflow-hidden
-                border border-white/10
-                shadow-2xl
               "
             >
-              <video
-                src="/casinobanner.mp4" 
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-full object-cover"
+              <img
+                src="/right-heros.png"
+                alt="Casino Preview"
+                className="
+                  w-full h-auto object-contain
+                  drop-shadow-[0_0_70px_rgba(34,197,94,0.65)]
+                "
               />
 
-              {/* Soft green glow */}
               <div
                 className="
                   absolute inset-0 -z-10
                   blur-[90px]
-                  bg-green-500/30
+                  bg-green-500/25
                   rounded-full
                 "
               />
