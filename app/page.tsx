@@ -11,7 +11,7 @@ export default function Home() {
       <Header />
       <HeroSection />
       <GamesSection />
-      <Easyway />
+      {/* <Easyway /> */}
       <FeedbackSection />
       <TechStackSection />
     </main>
