@@ -286,3 +286,24 @@
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
+
+/* ===== GLOBAL BACKGROUND IMAGE ===== */
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background-image: url("/twobanner.jpeg"); /* 👈 your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* DARK OVERLAY */
+  filter: brightness(0.55);
+}

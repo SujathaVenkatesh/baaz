@@ -4,15 +4,16 @@ import GamesSection from "@/components/GamesSection";
 import FeedbackSection from "@/components/FeedbackSection";
 import TechStackSection from "@/components/TechStackSection";
 import Easyway from "@/components/Easyway";
-
+import PromoSection from "@/components/playsession"
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">
       <Header />
       <HeroSection />
       <GamesSection />
-      {/* <Easyway /> */}
+      <Easyway />
       <FeedbackSection />
+      <PromoSection/>
       <TechStackSection />
     </main>
   );
