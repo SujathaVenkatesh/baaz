@@ -35,7 +35,7 @@ export default function CasinoFeaturesSection() {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/75" />
+      <div className="absolute inset-0 " />
 
       {/* Glow */}
       <div className="absolute inset-0">
