@@ -65,7 +65,9 @@ export default function HeroSection() {
   <div
     className="
       relative
-      w-[100%]
+      w-full
+      max-w-[92vw]
+      md:max-w-none
       md:w-[820px]
       lg:w-[980px]
       xl:w-[1100px]
@@ -74,13 +76,18 @@ export default function HeroSection() {
     <img
       src="/right-heros.png"
       alt="Casino Preview"
-      className="w-full h-auto object-contain"
+      className="
+        w-full h-auto object-contain
+        max-h-[260px]
+        md:max-h-none
+      "
     />
 
     {/* GREEN GLOW */}
-    <div className="absolute inset-0 -z-10 blur-[130px] bg-green-500/35 rounded-full" />
+    <div className="absolute inset-0 -z-10 blur-[120px] bg-green-500/30 rounded-full" />
   </div>
 </div>
+
 
         </div>
       </div>
